@@ -1,0 +1,14 @@
+<h1>Sign up for my newslwtter!</h1>
+
+
+<% if cookies[:saves_lead] %>
+    Thanks for signing up!
+<% else %>
+  <%= form_for @lead do |f| %>
+    <%= f.text_field :name , placeholder: "Neme"%><br>
+    <%= f.email_field :email, placeholder: "Email" %><br>
+    <%= f.text_field :device, placeholder: "Device" %><br>
+    <%= f.text_field :country, placeholder: "Country" %><br>
+    <%= f.submit %>
+  <% end%>
+<%end%>
